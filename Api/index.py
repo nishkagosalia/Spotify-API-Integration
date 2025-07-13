@@ -14,6 +14,10 @@ REDIRECT_URI = os.getenv("SPOTIFY_REDIRECT_URI")
 
 TOKENS = {}
 
+@app.get("/")
+def root():
+    return {"message": "Hello from FastAPI on Vercel"}
+
 def get_access_token(refresh_token):
     auth_str = f"{CLIENT_ID}:{CLIENT_SECRET}"
     b64_auth = requests.utils.quote(auth_str.encode("utf-8").decode("latin1"))
