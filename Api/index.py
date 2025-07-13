@@ -4,7 +4,6 @@ from fastapi.responses import RedirectResponse, JSONResponse
 from dotenv import load_dotenv
 import requests, os
 
-load_dotenv()
 
 app = FastAPI()
 
