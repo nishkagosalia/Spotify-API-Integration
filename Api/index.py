@@ -13,6 +13,8 @@ REDIRECT_URI = os.getenv("SPOTIFY_REDIRECT_URI")
 
 TOKENS = {}
 
+print("Client ID:", CLIENT_ID)
+
 @app.get("/")
 def root():
     return {"message": "Hello from FastAPI on Vercel"}
